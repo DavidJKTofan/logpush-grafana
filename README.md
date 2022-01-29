@@ -166,12 +166,12 @@ curl -sv \
 ### Logpush Job
 
 Make sure to change the following details:
-* <ZONE_ID> (located in the Overview tab for the chosen domain)
-* <YOUR_EMAIL> like "YOUR_EMAIL@gmail.com"
-* <GLOBAL_API_KEY> like "abcdefghijklmnop_YOUR_API_1234567890" ([Prepare your API tokens or keys](https://developers.cloudflare.com/api/tokens))
-* <YOUR_WORKERS_URL> like "https://WORKERS_NAME.YOUR_DOMAIN.workers.dev"
-* <YOUR_LOKI_USER_AND_PASSWORD_IN_BASE64> like "dXNlcm5hbWU6cGFzc3dvcmQ=" (you can use [CyberChef](https://gchq.github.io/CyberChef/#recipe=To_Base64('A-Za-z0-9%2B/%3D')&input=dXNlcm5hbWU6cGFzc3dvcmQ))
-* <YOUR_LOKI_JOB_NAME> like "grafanacloud-logs"
+* `<ZONE_ID>` (located in the Overview tab for the chosen domain)
+* `<YOUR_EMAIL>` like "YOUR_EMAIL@gmail.com"
+* `<GLOBAL_API_KEY>` like "abcdefghijklmnop_YOUR_API_1234567890" ([Prepare your API tokens or keys](https://developers.cloudflare.com/api/tokens))
+* `<YOUR_WORKERS_URL>` like "https://WORKERS_NAME.YOUR_DOMAIN.workers.dev"
+* `<YOUR_LOKI_USER_AND_PASSWORD_IN_BASE64>` like "dXNlcm5hbWU6cGFzc3dvcmQ=" (you can use [CyberChef](https://gchq.github.io/CyberChef/#recipe=To_Base64('A-Za-z0-9%2B/%3D')&input=dXNlcm5hbWU6cGFzc3dvcmQ))
+* `<YOUR_LOKI_JOB_NAME>` like "grafanacloud-logs"
 
 The last two parameters can be found/edited on your Grafana Dashboard > Configuration > Data Sources > Your Loki > Settings.
 
