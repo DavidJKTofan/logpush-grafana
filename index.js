@@ -57,6 +57,7 @@ async function pushLogs(payload, credentials) {
       'Content-Type': 'application/json',
     },
   })
+  console.log(await req.json())
   return req
 }
 
