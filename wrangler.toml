@@ -1,9 +1,9 @@
 name = "logpush-grafana"
 type = "webpack"
 
-account_id = "YOUR_ACCOUNT_ID"
-workers_dev = true
-route = ""
-zone_id = ""
+account_id = "eb72da6777f630a3116117a141717763"
+zone_id = "bef15c86c286cb58f9c8935bba13852f"
 usage_model = "unbound"
 compatibility_date = "2022-01-20"
+
+workers_dev = true

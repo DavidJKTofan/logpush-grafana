@@ -78,12 +78,12 @@ let log
     // AFAIK this is just required for the very first time of setting up the logpush job since it's not gzipped data?
     let date = new Date().getTime() * 1000000
     log = await payload.json()
-    lokiFormat.streams[0].values.push([date, JSON.stringify(log)])
+    lokiFormat.streams[0].values.push([date.toString(), JSON.stringify(log)])
     return lokiFormat
 }
   log.forEach(element => {
     let date = element.EdgeStartTimestamp || new Date().getTime() * 1000000
-    lokiFormat.streams[0].values.push([date, element])
+    lokiFormat.streams[0].values.push([date.toString(), element])
 })
   return lokiFormat
 }
@@ -207,6 +207,6 @@ Additionally, there is a variety of [Analytics Integrations](https://developers.
 
 # Disclaimer
 
-This guide was inspired by a colleague – all crediting goes to him. 🤓
+This guide was inspired by a colleague – all [crediting goes to him](https://github.com/pew/cloudflare-worker-logpush-loki). 🤓
 
 Educational purposes only, and this blog post does not necessarily reflect the opinions of Cloudflare. There are many more aspects to Cloudflare and its products and services – this is merely a brief educational intro. Properly inform yourself, keep learning, keep testing, and feel free to share your learnings and experiences as I do. Hope it was helpful! Images are online and publicly accessible.
