@@ -33,13 +33,13 @@ async function transformLogs(obj) {
   } else {
     let date = new Date().getTime() * 1000000
     log = await payload.json()
-    lokiFormat.streams[0].values.push([date, JSON.stringify(log)])
+    lokiFormat.streams[0].values.push([date.toString(), JSON.stringify(log)])
     return lokiFormat
   }
 
   log.forEach((element) => {
     let date = element.EdgeStartTimestamp || new Date().getTime() * 1000000
-    lokiFormat.streams[0].values.push([date, element])
+    lokiFormat.streams[0].values.push([date.toString(), element])
   })
 
   return lokiFormat
